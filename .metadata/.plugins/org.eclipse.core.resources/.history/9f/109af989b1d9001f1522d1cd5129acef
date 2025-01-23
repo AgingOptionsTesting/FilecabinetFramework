@@ -13,7 +13,7 @@ public class webUtil {
 		driver=	new ChromeDriver();
 		}else if(browserName.equalsIgnoreCase("edge")) {
 			driver=new EdgeDriver();
-		}else if(browserName.equalsIgnoreCase("fireFox")){
+		}else if(browserName.equalsIgnoreCase("fireFox"){
 			driver=new FirefoxDriver();
 		}
 	}
