@@ -1,16 +1,17 @@
 package com.utils;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class webUtil {
 	private WebDriver driver;
-	
+
 	public void launchBrowser(String browserName) {
 		if(browserName.equalsIgnoreCase("Chrome")) {
-		driver=	new ChromeDriver();
+			driver=	new ChromeDriver();
 		}else if(browserName.equalsIgnoreCase("edge")) {
 			driver=new EdgeDriver();
 		}else if(browserName.equalsIgnoreCase("fireFox")){
@@ -20,6 +21,13 @@ public class webUtil {
 	public void openUrl(String url) {
 		driver.get(url);
 	}
-	
+	public void click(WebElement we) {
+		try {
+			we.click();
+		}catch(Exception e) {
+			e.printStackTrace();
+			throw e;
+		}
+	}
 
 }
