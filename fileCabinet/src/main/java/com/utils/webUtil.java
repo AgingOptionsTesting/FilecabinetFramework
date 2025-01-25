@@ -17,8 +17,9 @@ public class webUtil {
 			driver=new FirefoxDriver();
 		}
 	}
-	
-	
+	public void openUrl(String url) {
+		driver.get(url);
+	}
 	
 
 }
