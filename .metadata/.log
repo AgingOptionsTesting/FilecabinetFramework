@@ -894,3 +894,17 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.eclipse.m2e.logback.appender 2 0 2025-01-26 16:13:42.844
 !MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.egit.ui 4 0 2025-01-26 16:14:32.003
+!MESSAGE An internal error occurred
+!STACK 0
+org.eclipse.jgit.api.errors.JGitInternalException: No changes
+	at org.eclipse.jgit.api.CommitCommand.createTemporaryIndex(CommitCommand.java:557)
+	at org.eclipse.jgit.api.CommitCommand.call(CommitCommand.java:262)
+	at org.eclipse.egit.core.op.CommitOperation.commit(CommitOperation.java:259)
+	at org.eclipse.egit.core.op.CommitOperation$1.run(CommitOperation.java:211)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2448)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2473)
+	at org.eclipse.egit.core.op.CommitOperation.execute(CommitOperation.java:220)
+	at org.eclipse.egit.ui.internal.commit.CommitJob.run(CommitJob.java:135)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
